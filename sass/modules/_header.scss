@@ -34,3 +34,77 @@
   width: 200px;
   padding-bottom: 0;
 }
+.bodyC {
+  position: relative;
+  @include addPadding(0px);
+  background-color: $schoolLight;
+  margin-right: -15px;
+}
+.dropdown-menu {
+  margin-top: 25px;
+}
+.dropdown-menu-right {
+  right: -15px;
+}
+.dropdown-menu {
+  padding-top: 0;
+}
+.dropdown-menu .circleI {
+  width: 30px;
+  height: 30px;
+  @include roundCorners(50%);
+  background-color: #eff3f4;
+  color: #ccc;
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 0 10px;
+  padding-top: 5px;
+}
+.dropdown-menu li {
+  position: relative;
+  margin-right: 0; /*padding:10px 0;*/
+}
+.dropdown-menu li:hover .emptyCircle {
+  background-color: #fff;
+}
+.dropdown-menu li:hover .circleI {
+  background-color: #fff;
+}
+
+.listText {
+  position: absolute;
+  top: 7px;
+  left: 60px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.listText span {
+  color: red;
+  font-size: 1.5rem;
+}
+.topPanel {
+  width: 100%;
+  height: 50px;
+  background-color: #383838;
+  position: relative;
+}
+.topPanel i {
+  position: absolute;
+  top: -20px;
+  left: 80%;
+  font-size: 3rem;
+  color: #383838;
+}
+.topPanel p {
+  @include addPadding(15px 0 0 20px);
+}
+#messageBadge {
+  position: relative;
+  background-color: $schoolMainLight;
+  font-size: 1rem;
+  left: 10px;
+  top: -2px;
+  width: 30;
+  height: 30;
+  text-align: center;
+}

@@ -4,31 +4,8 @@ body {
   background-color: $schoolDark;
 }
 
-#topPanel {
-  margin: 0;
-  position: relative;
-}
-
-.bannerContainer {
-  padding: 0;
-}
-
 #bottomPanel {
   margin: 0;
-}
-
-.bodyC {
-  position: relative;
-  padding: 0;
-  background-color: $schoolLight;
-  margin-right: -15px;
-}
-
-.dropdown-menu {
-  margin-top: 25px;
-}
-.dropdown-menu-right {
-  right: -15px;
 }
 
 .mainC_nav {
@@ -62,18 +39,9 @@ body {
 .trending,
 .sports {
   height: 350px;
-  background-color: #959595;
+  background-color: $courseText;
   color: white;
   font-size: 0.8rem;
-}
-
-.box2,
-.box3 {
-  padding-left: 0;
-}
-
-#mainImg {
-  width: 100%;
 }
 
 .courseStuff,
@@ -86,7 +54,7 @@ body {
   position: relative;
   left: 40px;
   font-weight: 300;
-  color: #969595;
+  color: $courseText;
 }
 
 .courseInfo h2 {
@@ -103,7 +71,7 @@ body {
 .weeklySched {
   position: relative;
   left: 40px;
-  color: #969595;
+  color: $courseText;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -130,8 +98,8 @@ body {
 }
 
 .dayBox {
-  background-color: #eaeaea;
-  color: #9b9b9b;
+  background-color: $schoolLight;
+  color: $courseText;
   width: 90%;
   height: 275px;
 }
@@ -173,7 +141,7 @@ th {
 }
 td {
   font-size: 1.45rem;
-  padding: 10px 0;
+  @include addPadding(10px, 0px);
 }
 table th:first-child,
 table td:first-child {
@@ -181,10 +149,10 @@ table td:first-child {
 }
 
 table tr:nth-child(2n + 1) {
-  background-color: #f0f2f5;
+  background-color: $schoolLight;
 }
 table tr:nth-child(2n + 2) {
-  background-color: #f6f8fa;
+  background-color: $schoolLight;
 }
 td span {
   margin-left: 12px;
@@ -281,7 +249,7 @@ footer {
 .footerContent {
   position: relative;
   left: 7.5%;
-  padding: 0;
+  @include addPadding(0px);
   width: 90%;
 }
 .footerStuff {
@@ -289,79 +257,13 @@ footer {
 }
 
 /*attempting to style dropdowns*/
-.dropdown-menu {
-  padding-top: 0;
-}
-.dropdown-menu .circleI {
-  width: 30px;
-  height: 30px;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #eff3f4;
-  color: #ccc;
-  text-align: center;
-  font-size: 1.7rem;
-  margin: 0 10px;
-  padding-top: 5px;
-}
-.dropdown-menu li {
-  position: relative;
-  margin-right: 0; /*padding:10px 0;*/
-}
-.dropdown-menu li:hover .emptyCircle {
-  background-color: #fff;
-}
-.dropdown-menu li:hover .circleI {
-  background-color: #fff;
-}
-
-.listText {
-  position: absolute;
-  top: 7px;
-  left: 60px;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-}
-.listText span {
-  color: red;
-  font-size: 1.5rem;
-}
-.topPanel {
-  width: 100%;
-  height: 50px;
-  background-color: #383838;
-  position: relative;
-}
-.topPanel i {
-  position: absolute;
-  top: -20px;
-  left: 80%;
-  font-size: 3rem;
-  color: #383838;
-}
-.topPanel p {
-  padding: 15px 0 0 20px;
-}
-
-#messageBadge {
-  position: relative;
-  background-color: #853c37;
-  font-size: 1rem;
-  left: 10px;
-  top: -2px;
-  width: 30;
-  height: 30;
-  text-align: center;
-}
 
 .emptyCircle {
   display: inline-block;
   width: 30px;
   height: 30px;
   background-color: #eff3f4;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  @include roundCorners(50%);
   margin-left: 10px;
 }
 
@@ -370,7 +272,7 @@ footer {
 }
 
 .dropdown-menu > li > a {
-  padding: 10px 0;
+  @include addPadding(10px, 0px);
 }
 
 .navIndicator {
@@ -429,7 +331,7 @@ footer {
 .tCal {
   position: relative;
   left: 40px;
-  padding: 0; /*background-color: #333;*/
+  @include addPadding(0px); /*background-color: #333;*/
 }
 
 .calSnap {
