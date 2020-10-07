@@ -2,12 +2,14 @@
   height: 110px;
   background-color: #ffffff;
 }
+
 .clLogo {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   left: 40px;
 }
+
 .yellowBoxNav {
   position: relative;
   display: inline-block;
@@ -29,11 +31,13 @@
     font-size: 3rem;
   }
 }
+
 .discussionDrop {
   margin: 10px 0;
   width: 200px;
   padding-bottom: 0;
 }
+
 .bodyC {
   position: relative;
   @include addPadding(0px);
@@ -42,33 +46,33 @@
 }
 .dropdown-menu {
   margin-top: 25px;
+  padding-top: 0;
+  background-color: $schoolLight;
+  li {
+    position: relative;
+    margin-right: 0; /*padding:10px 0;*/
+    :hover {
+      background-color: $schoolLight;
+    }
+  }
+  .circleI {
+    width: 30px;
+    height: 30px;
+    @include roundCorners(50%);
+    background-color: $schoolLight;
+    color: #959595;
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 0 10px;
+    padding-top: 5px;
+  }
 }
 .dropdown-menu-right {
   right: -15px;
 }
-.dropdown-menu {
-  padding-top: 0;
-}
-.dropdown-menu .circleI {
-  width: 30px;
-  height: 30px;
-  @include roundCorners(50%);
-  background-color: #eff3f4;
-  color: #ccc;
-  text-align: center;
-  font-size: 1.7rem;
-  margin: 0 10px;
-  padding-top: 5px;
-}
-.dropdown-menu li {
-  position: relative;
-  margin-right: 0; /*padding:10px 0;*/
-}
-.dropdown-menu li:hover .emptyCircle {
-  background-color: #fff;
-}
-.dropdown-menu li:hover .circleI {
-  background-color: #fff;
+
+.emptyCircle {
+  background-color: $schoolLight;
 }
 
 .listText {
@@ -77,27 +81,29 @@
   left: 60px;
   font-size: 1.5rem;
   line-height: 1.5rem;
+  span {
+    color: red;
+    font-size: 1.5rem;
+  }
 }
-.listText span {
-  color: red;
-  font-size: 1.5rem;
-}
+
 .topPanel {
   width: 100%;
   height: 50px;
   background-color: #383838;
   position: relative;
+  i {
+    position: absolute;
+    top: -20px;
+    left: 80%;
+    font-size: 3rem;
+    color: #383838;
+  }
+  p {
+    @include addPadding(15px 0 0 20px);
+  }
 }
-.topPanel i {
-  position: absolute;
-  top: -20px;
-  left: 80%;
-  font-size: 3rem;
-  color: #383838;
-}
-.topPanel p {
-  @include addPadding(15px 0 0 20px);
-}
+
 #messageBadge {
   position: relative;
   background-color: $schoolMainLight;

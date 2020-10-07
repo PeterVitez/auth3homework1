@@ -9,24 +9,31 @@
   -moz-box-shadow: 3px 3px 3px 0px #666;
   -webkit-box-shadow: 3px 3px 3px 0px #666;
   box-shadow: 3px 3px 3px 0px #666;
+
   img {
     position: absolute;
     right: -20px;
     top: -20px;
   }
-  p:first-child {
-    font-size: 3rem;
-    font-weight: 300;
-    margin-bottom: 3px;
-    span {
-      color: $courseText;
+
+  p {
+    &:first-child {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 3px;
+
+      span {
+        color: $courseText;
+      }
+    }
+
+    &:nth-child(2) {
+      font-size: 2.2rem;
+      color: $schoolMain;
+      margin-top: -8px;
     }
   }
-  p:nth-child(2) {
-    font-size: 2.2rem;
-    color: $schoolMain;
-    margin-top: -8px;
-  }
+
   ul {
     color: $courseText;
     padding-top: 5px;
@@ -42,10 +49,12 @@
   top: 10px;
   left: 20px;
 }
+
 #topPanel {
   margin: 0;
   position: relative;
 }
+
 .bannerContainer {
   @include addPadding(0px);
 }
