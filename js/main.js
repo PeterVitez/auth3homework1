@@ -1,25 +1,25 @@
 fetch("./data/classData.json")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
-    function handleDataSet(data) {
-      let myData = JSON.parse(data),
-        profSection = document.querySelector(".user-section"),
-        userTemplate = document.querySelector("#profs-template").content;
+    let myData = data;
 
-      for (let user in myData) {
-        let currentUser = userTemplate.cloneNode(true),
-          currentUserText = currentUser.querySelector(".user").children;
+    let courseinfo = document.getElementsByClassName("profPanelText")[0];
+    courseinfo.firstElementChild.innerHTML = myData.coursename;
 
-        currentUserText[1].textContent = myData[user].name;
-        currentUserText[2].textContent = myData[user].role;
-        currentUserText[3].textContent = myData[user].nickname;
+    courseinfo.innerHTML += myData.coursecode;
 
-        profSection.appendChild(currentUser);
-      }
-    }
-    //This is where the loop to place data goes
+    let profname = (document.getElementById(
+      "profname"
+    ).innerHTML = `Professor - ${myData.profname}`);
+
+    let classtime = document.getElementsByClassName("profPanelText")[0]
+      .lastElementChild;
+    classtime.innerHTML = `${myData.classtime[0]} - ${myData.classtime[1]}`;
+
+    //  = document.getElementsByClassName("example")[0];
+    // list.getElementsByClassName("child")[0].innerHTML = "Milk";
   })
+  //This is where the loop to place data goes
   .catch((err) => {
     console.log(err);
   });
